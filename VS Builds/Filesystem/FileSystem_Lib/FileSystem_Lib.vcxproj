@@ -133,6 +133,19 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\libs\filesystem\src\codecvt_error_category.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\operations.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\path.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\path_traits.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\portability.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\unique_path.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\utf8_codecvt_facet.cpp" />
+    <ClCompile Include="..\..\..\libs\filesystem\src\windows_file_codecvt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\libs\filesystem\src\windows_file_codecvt.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
