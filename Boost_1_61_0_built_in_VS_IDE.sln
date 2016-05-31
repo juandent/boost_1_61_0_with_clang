@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Boost_1_61_0_built_in_VS_ID
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileSystem_Lib", "VS Builds\Filesystem\FileSystem_Lib\FileSystem_Lib.vcxproj", "{3CF4B824-B740-4B17-AE56-A220B012C19F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Filesystem_Tests", "VS Builds\Filesystem\Filesystem_Tests\Filesystem_Tests\Filesystem_Tests.vcxproj", "{FB94CA21-914C-4144-A921-405C5A59BFA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{3CF4B824-B740-4B17-AE56-A220B012C19F}.Release|x64.Build.0 = Release|x64
 		{3CF4B824-B740-4B17-AE56-A220B012C19F}.Release|x86.ActiveCfg = Release|Win32
 		{3CF4B824-B740-4B17-AE56-A220B012C19F}.Release|x86.Build.0 = Release|Win32
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Debug|x64.ActiveCfg = Debug|x64
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Debug|x64.Build.0 = Debug|x64
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Debug|x86.ActiveCfg = Debug|Win32
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Debug|x86.Build.0 = Debug|Win32
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Release|x64.ActiveCfg = Release|x64
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Release|x64.Build.0 = Release|x64
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Release|x86.ActiveCfg = Release|Win32
+		{FB94CA21-914C-4144-A921-405C5A59BFA1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
