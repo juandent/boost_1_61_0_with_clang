@@ -67,6 +67,7 @@ typedef HANDLE _fi_find_handle;
 
 #elif defined(BOOST_REGEX_FI_POSIX_DIR)
 
+#error include...
 #include <cstddef>
 #include <cstdio>
 #include <cctype>
