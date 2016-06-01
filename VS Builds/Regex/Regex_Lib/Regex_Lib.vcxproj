@@ -93,9 +93,10 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);BOOST_REGEX_FI_WIN32_DIR;BOOST_SP_USE_STD_ATOMIC;BOOST_REGEX_FI_WIN32_MAP</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);BOOST_SP_USE_STD_ATOMIC</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <UndefinePreprocessorDefinitions>BOOST_REGEX_FI_POSIX_DIR</UndefinePreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

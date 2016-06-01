@@ -20,13 +20,33 @@
 
 #ifndef BOOST_RE_FILEITER_HPP_INCLUDED
 #define BOOST_RE_FILEITER_HPP_INCLUDED
+//jdh added
+#if defined(BOOST_REGEX_FI_POSIX_DIR)
+//#error BOOST_REGEX_FI_POSIX_DIR defined
+#endif
+//jdh added
+#if defined(BOOST_REGEX_NO_W32)
+//#error BOOST_REGEX_NO_W32 defined
+#endif
+
 
 #ifndef BOOST_REGEX_CONFIG_HPP
 #include <boost/regex/config.hpp>
 #endif
 #include <boost/assert.hpp>
 
+//jdh added
+#if defined(BOOST_REGEX_NO_W32)
+//#error BOOST_REGEX_NO_W32 defined
+#endif
+
+
 #ifndef BOOST_REGEX_NO_FILEITER
+
+//jdh added
+#if defined(BOOST_REGEX_FI_POSIX_DIR)
+//#error BOOST_REGEX_FI_POSIX_DIR defined
+#endif
 
 #if (defined(__CYGWIN__) || defined(__CYGWIN32__)) && !defined(BOOST_REGEX_NO_W32)
 #error "Sorry, can't mix <windows.h> with STL code and gcc compiler: if you ran configure, try again with configure --disable-ms-windows"
@@ -40,8 +60,23 @@
 #define BOOST_REGEX_FI_POSIX_DIR
 #endif
 
+//jdh added
+#if defined(BOOST_REGEX_NO_W32)
+//#error BOOST_REGEX_NO_W32 defined
+#endif
+
+//jdh added
+#if defined(BOOST_REGEX_FI_POSIX_DIR)
+//#error BOOST_REGEX_FI_POSIX_DIR defined
+#endif
+
 #if defined(BOOST_REGEX_FI_WIN32_MAP)||defined(BOOST_REGEX_FI_WIN32_DIR)
 #include <windows.h>
+#endif
+
+//jdh added
+#if defined(BOOST_REGEX_FI_POSIX_DIR)
+//#error BOOST_REGEX_FI_POSIX_DIR defined
 #endif
 
 #if defined(BOOST_REGEX_FI_WIN32_DIR)
@@ -67,7 +102,6 @@ typedef HANDLE _fi_find_handle;
 
 #elif defined(BOOST_REGEX_FI_POSIX_DIR)
 
-#error include...
 #include <cstddef>
 #include <cstdio>
 #include <cctype>

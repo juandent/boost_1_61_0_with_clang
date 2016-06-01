@@ -20,7 +20,14 @@
 #define BOOST_REGEX_SOURCE
 
 #include <boost/regex.hpp>
+  //jdh added
+#if defined(BOOST_REGEX_NO_W32)
+// when we get here it is defined!
+//#error BOOST_REGEX_NO_W32 defined
+#endif
+
 #include <boost/cregex.hpp>
+
 #if !defined(BOOST_NO_STD_STRING)
 #include <map>
 #include <list>
@@ -642,7 +649,6 @@ basic_string<wchar_t>::replace<const wchar_t*>(wchar_t* f1, wchar_t* f2, const w
 #endif
 
 #endif
-
 
 
 
