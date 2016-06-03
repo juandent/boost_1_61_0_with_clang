@@ -6,6 +6,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\juan_\Documents\GitHub\boost_1_61_0\boost_1_61_0</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
