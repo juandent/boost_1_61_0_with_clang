@@ -97,6 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
+      <MSCompatibility>true</MSCompatibility>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
