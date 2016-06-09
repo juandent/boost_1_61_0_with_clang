@@ -19,33 +19,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1535B8E9-6BF8-458E-A080-C022F7E66F23}</ProjectGuid>
+    <ProjectGuid>{E1A2AEAB-8029-43AA-9FC5-344C01C196B9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Regex_Lib</RootNamespace>
+    <RootNamespace>Regex_Examples</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140_Clang_3_7</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -58,33 +58,45 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\PropertySheet-common.props" />
+    <Import Project="..\..\..\..\PropertySheet-common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\PropertySheet-common.props" />
+    <Import Project="..\..\..\..\PropertySheet-common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\PropertySheet-common.props" />
+    <Import Project="..\..\..\..\PropertySheet-common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\PropertySheet-common.props" />
+    <Import Project="..\..\..\..\PropertySheet-common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -93,16 +105,15 @@
       </PrecompiledHeader>
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);BOOST_SP_USE_STD_ATOMIC;_CRT_SECURE_NO_WARNINGS;BOOST_REGEX_MATCH_EXTRA </PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;BOOST_SP_USE_STD_ATOMIC;BOOST_REGEX_MATCH_EXTRA</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <UndefinePreprocessorDefinitions>
-      </UndefinePreprocessorDefinitions>
-      <MSCompatibility>true</MSCompatibility>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\juan_\Documents\GitHub\boost_1_61_0\boost_1_61_0\x64\Debug\Regex_Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,13 +124,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,39 +142,48 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\libs\regex\src\cpp_regex_traits.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\cregex.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\c_regex_traits.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\fileiter.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\icu.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\instances.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\posix_api.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\regex.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\regex_debug.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\regex_raw_buffer.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\regex_traits_defaults.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\static_mutex.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\usinstances.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\w32_regex_traits.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\wc_regex_traits.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\wide_posix_api.cpp" />
-    <ClCompile Include="..\..\..\libs\regex\src\winstances.cpp" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\libs\regex\src\internals.hpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\grep\grep.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\captures_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\credit_card_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\icu_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\mfc_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\partial_regex_grep.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\partial_regex_iterate.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\partial_regex_match.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_grep_example_1.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_grep_example_2.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_grep_example_3.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_grep_example_4.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_iterator_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_match_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_merge_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_replace_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_search_example.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_split_example_1.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_split_example_2.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_token_iterator_eg_1.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\snippets\regex_token_iterator_eg_2.cpp" />
+    <ClCompile Include="..\..\..\..\libs\regex\example\timer\regex_timer.cpp" />
+    <ClCompile Include="Regex_Examples.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v140_Clang_3_7</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -103,7 +103,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
@@ -111,6 +111,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\juan_\Documents\GitHub\boost_1_61_0\boost_1_61_0\x64\Debug\FileSystem_Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,10 +154,30 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\libs\filesystem\test\test_codecvt.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\convenience_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\deprecated_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\design_use_cases.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\equivalent.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\fstream_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\large_file_support_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\locale_info.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\long_path_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\macro_default_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\odr1_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\odr2_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\operations_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\operations_unit_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\path_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\path_times.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\path_unit_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\relative_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\sample_test.cpp" />
+    <ClCompile Include="..\..\..\..\libs\filesystem\test\windows_attributes.cpp" />
     <ClCompile Include="Filesystem_Tests.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>

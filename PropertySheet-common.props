@@ -7,6 +7,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\juan_\Documents\GitHub\boost_1_61_0\boost_1_61_0</AdditionalIncludeDirectories>
       <MSCompatibility>true</MSCompatibility>
+      <PreprocessorDefinitions>BOOST_SP_USE_STD_ATOMIC</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />

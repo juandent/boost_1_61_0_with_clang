@@ -20,11 +20,6 @@
 #define BOOST_REGEX_SOURCE
 
 #include <boost/regex.hpp>
-  //jdh added
-#if defined(BOOST_REGEX_NO_W32)
-// when we get here it is defined!
-//#error BOOST_REGEX_NO_W32 defined
-#endif
 
 #include <boost/cregex.hpp>
 
